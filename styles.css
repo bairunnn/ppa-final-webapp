@@ -1,0 +1,106 @@
+/* Ensure the body takes up the full height of the viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    cursor: url('dot.cur'), default;
+}
+
+/* Title Bar: Top 10% */
+#title-bar {
+    height: 7%;
+    background-color: #ebe9e3;
+    color: #000000;
+    padding: 20px;
+    display: flex;
+    align-items: left;
+    justify-content: space-between; /* Space between logo/text and icons */
+    padding-right: 20px; /* Ensure there's space for the icons */}
+
+/* Title Bar content */
+#title-bar h1 {
+    margin: 0;
+    font-size: 24px;
+    /* font-weight: 600; */
+    display: flex;
+    align-items: center;
+}
+
+/* Logo image */
+#title-bar img {
+    height: 28px; /* Adjust as necessary */
+    margin-right: 10px; /* Space between logo and text */
+}
+
+#title-bar img:hover {
+    transform: scale(1.1); /* Zoom in by 10% */
+}
+
+/* Icon container */
+#title-bar .icon-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Individual icons */
+#title-bar svg {
+    width: 24px;
+    height: 24px;
+    margin-left: 19px; /* Space between icons */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+#title-bar svg:hover {
+    transform: scale(1.1); /* Zoom in by 10% */
+}
+
+
+/* Main Content and Map Panels: Flex container */
+#main-content {
+    display: flex;
+    height: 93%;
+}
+
+/* Content Panel: Left 30% */
+#content-panel {
+    width: 30%;
+    background-color: #f8f5ef;
+    padding: 20px;
+    overflow-y: auto;
+    height: 100%; /* Extend to the bottom */
+}
+
+#content-panel h2 {
+    font-size: 24px;
+}
+
+#content-panel h4 {
+    font-size: 18px;
+}
+
+/* Map Panel: Right 70% */
+#map-panel {
+    width: 70%;
+    background-color: #eaeaea;
+    padding: 20px;
+    height: 100%; /* Extend to the bottom */
+    cursor: url('dot.cur'), default;
+}
+
+/* Placeholder for the map */
+#map {
+    height: 100%;
+    background-color: #ccc;
+    cursor: url('dot.cur'), default;
+}
+
+#shortlist-button {
+    background-color: #d2d5ca;
+    color: #000;
+    border: none; /* Optional: Removes default button border */
+    transition: transform 0.2s ease; /* Optional: Adds a hover effect */
+}
+
+#shortlist-button:hover {
+    transform: scale(1.05); /* Optional: Slight zoom effect on hover */
+}
