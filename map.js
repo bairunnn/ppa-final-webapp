@@ -67,7 +67,7 @@ map.on('load', function() {
             popup
                 .setLngLat(e.lngLat)
                 .setHTML(`
-                    <div style="font-size: 1.4em; font-family: 'Barlow', sans-serif;">
+                    <div style="font-size: 1.4em; font-family: 'Inter', sans-serif;">
                         Neighborhood:<br><strong>${hood}</strong><br>
                         Number of listings: ${units}
                     </div>`)
