@@ -126,14 +126,14 @@ function addGaugeChart(fairbnbIndex) {
             value: fairbnbIndex,
             title: { text: "Fairbnb Index", font: { size: 16, family: "Inter, sans-serif" } },
             gauge: {
-                axis: { range: [-3, 3], tickwidth: 0.5, tickcolor: "black" },
+                axis: { range: [-7, 7], tickwidth: 1, tickcolor: "black" },
                 bar: { color: "black" },
                 steps: [
-                    { range: [-5, -1.5], color: "#c7522a" },
-                    { range: [-1.5, -0.5], color: "#e5c185" },
-                    { range: [-0.5, 0.5], color: "#c8c7d1" },
-                    { range: [0.5, 1.5], color: "#74a892" },
-                    { range: [1.5, 5], color: "#008585" }
+                    { range: [-10, -4], color: "#c7522a" },
+                    { range: [-4, -2], color: "#e5c185" },
+                    { range: [-2, 2], color: "#c8c7d1" },
+                    { range: [2, 4], color: "#74a892" },
+                    { range: [4, 10], color: "#008585" }
                 ],
             }
         }
@@ -156,9 +156,9 @@ function updateWarningsSection(fairbnbIndex) {
 
     // Determine the recommendation message based on fairbnbIndex
     let recommendation;
-    if (fairbnbIndex < -1.5) {
+    if (fairbnbIndex < -4) {
         recommendation = "Recommendation:<br>Likely <b>over-supply</b> of listings at this area — further policy intervention may be needed.";
-    } else if (fairbnbIndex > 1.5) {
+    } else if (fairbnbIndex > 4) {
         recommendation = "Recommendation:<br>Likely <b>under-supply</b> of listings at this area — further planning interventions may be needed.";
     } else {
         recommendation = "Recommendation:<br>The number of listings at this area is likely to be at market equilibrium.";
